@@ -1,0 +1,32 @@
+{
+  "name": "double-ui-web",
+  "version": "1.0.0",
+  "description": "web原生组件 开发",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build:component": "node src/script/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiongshuang/double-ui-web.git"
+  },
+  "keywords": [
+    "component",
+    "web components",
+    "原生组件"
+  ],
+  "author": "xsmails@163.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xiongshuang/double-ui-web/issues"
+  },
+  "homepage": "https://github.com/xiongshuang/double-ui-web#readme",
+  "devDependencies": {
+    "fs": "0.0.1-security",
+    "js-func-tools": "^2.0.7",
+    "minify": "^10.3.0",
+    "path": "^0.12.7",
+    "stylus": "^0.59.0"
+  }
+}

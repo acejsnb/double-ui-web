@@ -1,0 +1,1 @@
+class DCButton extends HTMLElement{constructor(){super();this.attachShadow({mode:'open'});this.shadowRoot.innerHTML=`<style>.btn{background-color:red;width:200px;height:40px}</style><button class=btn><slot></slot></button>`}}export default DCButton;
