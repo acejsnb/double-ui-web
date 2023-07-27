@@ -1,4 +1,123 @@
-.btn
-    background-color red
-    width 200px
+.d-btn
+    padding-left 8px
+    padding-right 8px
+    border-radius 4px
+    border-width 1px
+    border-style solid
+    vertical-align middle
+    width 80px
+    font-size 0
+    text-align center
+    transition background-color .3s, border .3s
+    + .d-btn
+        margin-left 12px
+    .d-btn-content
+        display flex
+        align-items center
+        justify-content center
+        width 100%
+        height 100%
+.d-btn-default
+    background-color var(--theme)
+    border-color var(--grey-400)
+    color var(--grey-900)
+    .d-btn-loading
+        path
+            stroke var(--grey-400)
+    &:hover
+        border-color var(--blue-500)
+        .d-btn-text
+            color var(--blue-500)
+    &:active
+        border-color var(--blue-600)
+        .d-btn-text
+            color var(--blue-600)
+.d-btn-blue
+    background-color var(--blue-500)
+    border-color var(--blue-500)
+    color var(--white)
+    &:hover
+        background-color var(--blue-400)
+        border-color var(--blue-400)
+    &:active
+        background-color var(--blue-600)
+        border-color var(--blue-600)
+.d-btn-green
+    background-color var(--green-500)
+    border-color var(--green-500)
+    color var(--white)
+    &:hover
+        background-color var(--green-400)
+        border-color var(--green-400)
+    &:active
+        background-color var(--green-600)
+        border-color var(--green-600)
+.d-btn-orange
+    background-color var(--orange-500)
+    border-color var(--orange-500)
+    color var(--white)
+    &:hover
+        background-color var(--orange-400)
+        border-color var(--orange-400)
+    &:active
+        background-color var(--orange-600)
+        border-color var(--orange-600)
+.d-btn-red
+    background-color var(--red-500)
+    border-color var(--red-500)
+    color var(--white)
+    &:hover
+        background-color var(--red-400)
+        border-color var(--red-400)
+    &:active
+        background-color var(--red-600)
+        border-color var(--red-600)
+.d-btn-word
+    background none
+    border-color transparent
+    width auto
+    color var(--grey-900)
+    .d-btn-text
+        font-weight 500
+    &:hover
+        .d-btn-text
+            color var(--blue-500)
+    &:active
+        .d-btn-text
+            color var(--blue-600)
+.d-btn-loading
+    margin-right 8px
+    margin-left -4px
+    width 16px
+    height @width
+.d-btn-text
+    user-select none
+    overflow hidden
+    text-overflow ellipsis
+    white-space nowrap
+.d-btn-large
+    // max-width 128px
+    // min-width 80px
     height 40px
+.d-btn-medium
+    // max-width 116px
+    // min-width 80px
+    height 32px
+.d-btn-small
+    // max-width 108px
+    // min-width 60px
+    height 28px
+
+.d-btn-normal
+    cursor pointer
+.d-btn.d-btn-disabled
+    cursor not-allowed
+    .d-btn-text
+        color var(--grey-400)
+.d-btn-disabled:not([type='word'])
+    background-color var(--grey-200)
+    border-color var(--grey-200)
+
+.d-btn-text
+    font-size 14px
+    transition color .3s

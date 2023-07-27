@@ -1,9 +1,10 @@
 import { readdir, readFileSync, writeFileSync } from 'fs';
 import { fileURLToPath } from 'url';
-import {dirname, join} from 'path';
+import { dirname, join } from 'path';
 import { minify } from 'minify';
 import stylus from 'stylus';
 
+// 首字母大写
 const Capitalise = ([first, ...other]) => first.toUpperCase() + other.join('');
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -17,12 +18,12 @@ readdir(getFilePath(), (err, files) => {
     const fileNameList = files.filter(dir => !dir.includes('.'));
     fileNameList.forEach(async (dir) => {
         let css = '';
-        let styl = readFileSync(getFilePath(`${dir}/style.styl`), 'utf-8');
+        const styl = readFileSync(getFilePath(`${dir}/style.styl`), 'utf-8');
         // stylus ==> css
         stylus(styl, { filename: `${dir}.css` }).render((err, cssStr) => {
             if (err) throw err;
             css = cssStr;
-        })
+        });
         css = minify.css(css);
         let html = readFileSync(getFilePath(`${dir}/index.html`), 'utf-8');
         html = await minify.html(html);

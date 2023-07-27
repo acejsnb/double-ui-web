@@ -1,13 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>web-components</title>
+    <link rel="stylesheet" href="./assets/base.css">
+    <link rel="stylesheet" href="./assets/variables.css">
+    <style>
+        #app {
+            padding: 40px;
+        }
+    </style>
 </head>
 <body>
-<!--<div></div>-->
-<dc-button>哈哈哈</dc-button>
-<dc-button>哈哈哈</dc-button>
+<div id="app">
+    <dc-button onClick="dcbClick">哈哈哈</dc-button>
+    <dc-button type="blue" size="large">哈哈哈</dc-button>
+</div>
 <script type="module" src="./main.js"></script>
+<script>
+    function dcbClick(e) {
+        console.log(999,e);
+    }
+</script>
 </body>
 </html>
